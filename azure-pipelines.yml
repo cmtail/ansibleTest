@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- checkout: git://github.com/cmtail/ansibleTest@master
+- checkout: git://cmtail/ansibleTest@master
 
 - script: |
    sudo apt-get update 
