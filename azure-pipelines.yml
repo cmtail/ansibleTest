@@ -20,6 +20,6 @@ steps:
 - task: Ansible@0
   inputs:
     ansibleInterface: 'agentMachine'
-    playbookPathOnAgentMachine: 'language_features/nested_playbooks.yml'
+    playbookPathOnAgentMachine: 'windows/ping.yml'
     inventoriesAgentMachine: 'noInventory'
 
