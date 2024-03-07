@@ -11,11 +11,15 @@ pool:
 
 steps:
 - checkout: self
+
 - script: |
    sudo apt-get update 
    sudo apt-get install -y ansible
   displayName: "Ansible Test"
 
-- script: |
-    ansible-playbook -i inventory.yml playbook.yml
-  displayName: "PlayBook"
+- task: Ansible@0
+  inputs:
+    ansibleInterface: 'agentMachine'
+    playbookPathOnAgentMachine: 'ansibleTest/blob/master/language_features/nested_playbooks.yml'
+    inventoriesAgentMachine: 'noInventory'
+
