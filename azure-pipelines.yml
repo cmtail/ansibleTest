@@ -20,6 +20,6 @@ steps:
 - task: Ansible@0
   inputs:
     ansibleInterface: 'agentMachine'
-    playbookPathOnAgentMachine: 'ansibleTest/blob/master/language_features/nested_playbooks.yml'
+    playbookPathOnAgentMachine: 'language_features/nested_playbooks.yml'
     inventoriesAgentMachine: 'noInventory'
 
